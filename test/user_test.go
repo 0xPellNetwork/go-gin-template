@@ -84,9 +84,11 @@ func TestGetUser(t *testing.T) {
 	var createResponse middleware.Response
 	ParseResponseBody(t, createW, &createResponse)
 
-	userData, _ := json.Marshal(createResponse.Data)
+	userData, err := json.Marshal(createResponse.Data)
+	assert.NoError(t, err)
 	var user models.User
-	json.Unmarshal(userData, &user)
+	err = json.Unmarshal(userData, &user)
+	assert.NoError(t, err)
 
 	// 测试获取用户
 	req := MakeRequest("GET", "/api/v1/users/1", nil)
