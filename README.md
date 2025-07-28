@@ -21,17 +21,18 @@ gin-template/
 ├── cmd/
 │   └── server/
 │       └── main.go        # Application entry point
-├── go.mod                 # Go module file
-├── config/                # Configuration management
-├── database/              # Database connection
-├── models/                # Data models (User only)
-├── middleware/            # Middleware (smart parameter binding)
-├── service/               # Business logic layer
-├── controller/            # Controller layer (new architecture)
-├── router/                # Route configuration
+├── pkg/                   # Reusable packages
+│   ├── config/            # Configuration management
+│   ├── database/          # Database connection
+│   ├── models/            # Data models (User only)
+│   ├── middleware/        # Middleware (smart parameter binding)
+│   ├── service/           # Business logic layer
+│   ├── controller/        # Controller layer (new architecture)
+│   └── router/            # Route configuration
 ├── docs/                  # Swagger documentation
 ├── test/                  # Test files
-└── examples/              # API examples
+├── examples/              # API examples
+└── go.mod                 # Go module file
 ```
 
 ## 🛠️ Quick Start
@@ -262,14 +263,14 @@ make test-cover
 
 ### Adding New Models
 
-1. Create new model files in `models/`
-2. Add AutoMigrate in `database/database.go`
-3. Create corresponding Service and Controller
-4. Add routes in `router/router.go`
+1. Create new model files in `pkg/models/`
+2. Add AutoMigrate in `pkg/database/database.go`
+3. Create corresponding Service and Controller in `pkg/service/` and `pkg/controller/`
+4. Add routes in `pkg/router/router.go`
 
 ### Adding Middleware
 
-Create new middleware in `middleware/`, then use it in routes:
+Create new middleware in `pkg/middleware/`, then use it in routes:
 
 ```go
 r.Use(middleware.YourCustomMiddleware())

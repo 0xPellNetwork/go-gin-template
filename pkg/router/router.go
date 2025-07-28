@@ -1,11 +1,11 @@
 package router
 
 import (
-	"gin-template/controller"
 	"gin-template/docs"
-	"gin-template/middleware"
-	"gin-template/models"
-	"gin-template/service"
+	"gin-template/pkg/controller"
+	"gin-template/pkg/middleware"
+	"gin-template/pkg/models"
+	"gin-template/pkg/service"
 
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"

@@ -7,9 +7,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gin-template/config"
-	"gin-template/database"
-	"gin-template/router"
+	"gin-template/pkg/config"
+	"gin-template/pkg/database"
+	"gin-template/pkg/router"
 
 	"github.com/gin-gonic/gin"
 	"github.com/stretchr/testify/assert"

@@ -18,9 +18,9 @@
 package main
 
 import (
-	"gin-template/config"
-	"gin-template/database"
-	"gin-template/router"
+	"gin-template/pkg/config"
+	"gin-template/pkg/database"
+	"gin-template/pkg/router"
 
 	"github.com/rs/zerolog/log"
 )

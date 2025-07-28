@@ -1,8 +1,8 @@
 package database
 
 import (
-	"gin-template/config"
-	"gin-template/models"
+	"gin-template/pkg/config"
+	"gin-template/pkg/models"
 
 	"gorm.io/driver/mysql"
 	"gorm.io/driver/sqlite"

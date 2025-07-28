@@ -5,8 +5,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"gin-template/middleware"
-	"gin-template/models"
+	"gin-template/pkg/middleware"
+	"gin-template/pkg/models"
 
 	"github.com/stretchr/testify/assert"
 )

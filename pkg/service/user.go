@@ -1,7 +1,7 @@
 package service
 
 import (
-	"gin-template/models"
+	"gin-template/pkg/models"
 
 	"gorm.io/gorm"
 )
